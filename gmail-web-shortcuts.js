@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description
-// @author       nchicong41@gmail.com
+// @author       You
 // @match        https://mail.google.com/*
 // @grant        none
 // ==/UserScript==
@@ -38,7 +38,7 @@ Go to next mail after scrolling to the end of the content - Space
             var c = a / b;
 
             if (c >= 0.8 || b == 0) {
-                var newerBtn = document.querySelector('[aria-label="Newer"]');
+                var newerBtn = document.querySelector('[aria-label="Newer"]:not([aria-disabled])');
                 newerBtn.click();
             }
         }
